@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+          rel="stylesheet">
+    <title>Investeringspresenten</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+<div class="page-header">
+    <div class="logo">
+        <img src="logo.png" alt="Logo">
+        <h1> Investeringspresenten </h1>
+    </div>
+    <div class="page-title">Ditt Presentkort</div>
+    <div></div> <!-- Empty column for spacing -->
+</div>
+<div class="container">
+    <div class="container">
+        <!-- Overlay Container -->
+        <div class="content-container overlay-container fixed width-440">
+            <img src="giftcard.png" alt="Overlay Image">
+            <div class="text-overlay">1000 :-</div>
+        </div>
+        <!-- Investment Option -->
+        <div class="content-container fixed width-400">
+            <div class="info">
+                För att kunna investera din present behöver du ett investeringskonto. Vill du ha
+                hjälp att öppna ett sådant?
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="investment-option-yes" name="investment-option" value="ja"
+                       data-next="robot-option-container">
+                <label class="radio-option" for="investment-option-yes"> Ja</label>
+
+                <input type="radio" id="investment-option-no" name="investment-option" value="nej"
+                       data-next="phone-container">
+                <label class="radio-option" for="investment-option-no"> Nej, jag har redan ett
+                    investeringskonto</label>
+            </div>
+        </div>
+        <!-- Robot Option -->
+        <div class="content-container width-400" id="robot-option-container" style="display: none;">
+            <div class="info">
+                Vill du investera via Lysa eller Opti?
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="robot-option-lysa" name="robot-option" value="lysa"
+                       data-next="lysa-onboarding-container">
+                <label class="radio-option" for="robot-option-lysa"> Via Lysa</label>
+
+                <input type="radio" id="robot-option-opti" name="robot-option" value="opti"
+                       data-next="opti-onboarding-container">
+                <label class="radio-option" for="robot-option-opti"> Via Opti</label>
+            </div>
+        </div>
+        <!-- Lysa Onboarding -->
+        <div class="content-container width-400" id="lysa-onboarding-container"
+             style="display: none;">
+            <div class="info">
+                Följ <a
+                    href="https://signup.lysa.se/se?utm_source=startpage&utm_content=navbar-signup-button&utm_term=Bli+kund"
+                    target="_blank">onboarding stegen</a> för att bli en ny kund hos Lysa.
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="lysa-account-yes" name="lysa-account-option" value="yes"
+                       data-next="phone-container">
+                <label class="radio-option" for="lysa-account-yes"> Jag har skapat ett konto</label>
+
+                <input type="radio" id="lysa-account-no" name="lysa-account-option" value="no">
+                <label class="radio-option" for="lysa-account-no"> Jag har inte skapat ett
+                    konto</label>
+            </div>
+        </div>
+        <!-- Opti Onboarding -->
+        <div class="content-container width-400" id="opti-onboarding-container"
+             style="display: none;">
+            <div class="info">
+                Följ <a href="https://opti.app/sign-up" target="_blank">onboarding stegen</a> för
+                att bli en ny kund hos Opti.
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="opti-account-yes" name="opti-account-option" value="yes"
+                       data-next="phone-container">
+                <label class="radio-option" for="opti-account-yes"> Jag har skapat ett konto</label>
+
+                <input type="radio" id="opti-account-no" name="opti-account-option" value="no">
+                <label class="radio-option" for="opti-account-no"> Jag har inte skapat ett
+                    konto</label>
+            </div>
+        </div>
+        <!-- Phone Container -->
+        <div class="content-container width-400" id="phone-container" style="display: none;">
+            <div class="info">
+                Klicka på avsluta för att hämta ditt presentkort. Pengarna överförs via Swish till
+                telefonnummer:
+            </div>
+            <label>
+                <input type="text" value="0701112233">
+            </label>
+        </div>
+        <button class="finish-button width-440" style="display: none;">Avsluta</button>
+        <div class="progress-text fixed">Steg 1 av 4</div>
+    </div>
+</div>
+</body>
+
+</html>
+
+
+

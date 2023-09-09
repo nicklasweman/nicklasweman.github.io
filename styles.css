@@ -1,0 +1,210 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.page-header {
+    display: grid;
+    z-index: 2;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    align-items: center;
+    background-color: #fff; /* White background */
+    color: #333;
+    text-align: left;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 5px solid #FCC6D7; /* Light Pink */
+    box-sizing: border-box;
+}
+
+.page-header h1 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.page-title {
+    font-size: 18px;
+    /*font-weight: bold;*/
+    margin: 0;
+    color: #333;
+    text-align: center;
+}
+
+.info {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #666;
+}
+
+#phone-container label {
+    font-family: Arial, sans-serif;
+    color: #333; /* This will match the color styling you have for labels elsewhere */
+    font-size: 16px;
+}
+
+#phone-container input[type="text"] {
+    font-family: Arial, sans-serif;
+    font-size: 16px; /* Adjust the size to match your design */
+    width: 94%; /* Set the width to take up the full width of the container */
+    padding: 10px; /* Add some padding inside the input field */
+    border: 1px solid #333; /* Add a border around the input field */
+    border-radius: 4px; /* Optionally add some border radius for rounded corners */
+}
+
+.radio-option {
+    display: flex;
+    justify-content: flex-start; /* Align to the left */
+    flex-direction: column; /* Display radio buttons in a column */
+    margin-top: 10px;
+}
+
+.radio-option input[type="radio"] {
+    display: none;
+}
+
+.radio-option label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.radio-option label::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #f0f0f0;
+    border-radius: 50%;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.radio-option input[type="radio"]:checked + label::before {
+    background: #fff;
+    border: 1px solid #FCC6D7;
+}
+
+.radio-option input[type="radio"]:checked + label::after {
+    content: '';
+    position: absolute;
+    top: 4px; /* Adjusted to use px units */
+    left: 4px; /* Adjusted to use px units */
+    width: 8px;
+    height: 8px;
+    background: #EC3379;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Hide the h1 heading for small screens */
+@media (max-width: 768px) {
+    .logo h1 {
+        display: none;
+    }
+}
+
+.progress-text {
+    margin-top: 15px; /* Add top margin */
+    margin-bottom: 15px; /* Add top margin */
+    font-size: 14px;
+}
+
+.container {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f2f2f2;
+    padding: 20px 20px 20px;
+}
+
+.width-400 {
+    width: 100%;
+    max-width: 400px;
+}
+
+.width-440 {
+    width: 100%;
+    max-width: 440px;
+}
+
+.content-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    margin-top: 20px; /* Add margin to separate containers */
+    margin-bottom: 20px;
+}
+
+.overlay-container {
+    border-radius: 0; /* Remove the border radius */
+    box-shadow: none;
+    background-color: #f2f2f2;
+    position: relative; /* This is the key addition */
+}
+
+.overlay-container img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.text-overlay {
+    position: absolute; /* This takes the text out of the normal flow and positions it relative to the container */
+    bottom: 70px; /* Position from the bottom of the container */
+    right: 50px; /* Position from the left of the container */
+    padding: 5px;
+    font-family: 'Dancing Script', cursive; /* Apply the font */
+    font-size: 28px; /* Adjust font size as needed */
+    font-weight: bold;
+    color: #d7496c;
+}
+
+.finish-button {
+    border: none;
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #d7496c;
+    color: white;
+}
+
+.finish-button:hover {
+    background-color: #FCC6D7; /* Replace with your desired hover background color */
+    color: white; /* Replace with your desired text color */
+}
+
+a {
+    color: #d7496c; /* Change to your desired color */
+    text-decoration: none; /* Removes the underline from links */
+}
+
+a:hover {
+    color: #FCC6D7; /* Change to your desired hover color */
+    text-decoration: underline; /* Adds underline on hover */
+}
